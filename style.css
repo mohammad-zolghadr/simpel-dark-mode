@@ -1,0 +1,84 @@
+@font-face {
+  font-family: mFont;
+  src: url("./fonts/YekanBakh-Bold.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+html {
+  --color-primary: #226;
+  --color-secondary: #fff;
+  --color-bg: #e6e6e6;
+  --color-bg-light: #e0e0e0;
+}
+
+html[data-theme="dark"] {
+  --color-primary: #88a;
+  --color-secondary: #333;
+  --color-bg: #212121;
+  --color-bg-light: #242424;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  font-family: mFont;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  transition: all 0.3s;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+}
+
+#toggle {
+  cursor: pointer;
+}
+
+.toggle-container span {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+section {
+  width: 80%;
+  margin: auto;
+  border-radius: 10px !important;
+  padding: 50px;
+  background-color: var(--color-bg-light);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+section h3 {
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+section p {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  text-align: justify;
+  line-height: 150%;
+}
+
+@media (min-width: 768px) {
+  section {
+    width: 40%;
+  }
+}
